@@ -1,0 +1,17 @@
+{
+    "name": "Daltonic Climbing",
+    "image": "mcr.microsoft.com/devcontainers/python:3.9",
+    "features": {
+      "ghcr.io/devcontainers/features/python:1": {}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance"
+        ]
+      }
+    },
+    "postCreateCommand": "pip install -r requirements.txt"
+  }
+  
