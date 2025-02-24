@@ -2,6 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 import cv2
 import numpy as np
 import io
+import base64
 
 app = FastAPI()
 
@@ -16,4 +17,6 @@ async def process_image(file: UploadFile = File(...)):
 
     # Encode the processed image back to bytes
     _, encoded_img = cv2.imencode(".jpg", gray_img)
-    return {"message": "Image processed successfully", "image": encoded_img.tobytes()}
+   # Convert bytes to base64 string
+    base64_img = base64.b64encode(encoded_img.tobytes()).decode('utf-8')
+    return {"message": "Image processed successfully", "image": base64_img}
