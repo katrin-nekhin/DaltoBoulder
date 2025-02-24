@@ -26,7 +26,7 @@ class _ClimbingAppState extends State<ClimbingApp> {
     var request = http.MultipartRequest(
       'POST',
       Uri.parse('https://refactored-space-yodel-6954xjpwp7xjc7wq-8000.app.github.dev/process-image/')
-    );
+    );//http://127.0.0.1:8000/docs
     _msg = "sending request";
     request.files.add(await http.MultipartFile.fromPath('file', _image!.path));
     
