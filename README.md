@@ -9,7 +9,7 @@ unzip cmdline-tools.zip -d $HOME/Android/Sdk/cmdline-tools
 mv $HOME/Android/Sdk/cmdline-tools/cmdline-tools $HOME/Android/Sdk/cmdline-tools/latest
 
 
-# Progress Summary 
+# Progress Summary (ImageProcessingExercise.ipynb)
 ## Goal:
 1. Highlight climbing holds from a wall image.
 2. Identify and highlight a specific route by its color.
